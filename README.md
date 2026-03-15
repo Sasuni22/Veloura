@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # ZaraStyle — Modern Online Clothing Store
 
 A full-stack eCommerce web application for an online clothing store, built with React + Node.js.
@@ -238,3 +239,6 @@ npm start
 - `multer` — File uploads
 - `cors` — Cross-origin headers
 - `dotenv` — Environment variables
+=======
+# zara_style_Clothingstore
+>>>>>>> 9f60220165ab7cc0672294ec1e2b1dbbef5d076e
