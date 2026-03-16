@@ -13,7 +13,7 @@ const containerVariants = {
 const socialPosts = [
   {
     platform: 'Instagram',
-    handle: '@zarastyle',
+    handle: '@velourа',
     link: 'https://www.instagram.com/',
     icon: '📸',
     color: 'from-pink-500 to-purple-600',
@@ -23,7 +23,7 @@ const socialPosts = [
   },
   {
     platform: 'Facebook',
-    handle: 'ZaraStyle Official',
+    handle: 'Velourа Official',
     link: 'https://www.facebook.com/',
     icon: '📘',
     color: 'from-blue-500 to-blue-700',

@@ -73,10 +73,10 @@ export default function Navbar() {
             {/* Logo */}
             <Link to="/" className="flex items-center gap-2">
               <div className="w-7 h-7 bg-primary-dark rounded-full flex items-center justify-center">
-                <span className="text-white text-xs font-bold">Z</span>
+                <span className="text-white text-xs font-bold">V</span>
               </div>
               <span className="font-display text-xl font-semibold text-gray-900">
-                ZaraStyle
+                Velourа
               </span>
             </Link>
 
