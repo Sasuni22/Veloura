@@ -265,7 +265,7 @@ export const categories = [
   {
     id: 'frocks',
     name: 'Frocks',
-    image: '/images/floralsilk2.png',
+    image: '/images/frock1.png',
     count: '6 styles',
     description: 'Elegant dresses for every occasion',
   },
