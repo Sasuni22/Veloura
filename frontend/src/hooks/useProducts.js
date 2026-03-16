@@ -1,26 +1,22 @@
-// useProducts.js — reads admin-saved products/categories from localStorage
-// Falls back to the static products.js if no admin changes have been saved yet
+// useProducts.js — shared hook for reading AND saving products/categories
+// Used by store pages (ProductPage, CategoryPage, HomePage) AND admin dashboard
 import { useState, useEffect } from 'react';
 import { products as defaultProducts, categories as defaultCategories } from '../data/products';
 
 export function useProducts() {
   const [products, setProducts] = useState(() => {
-    try {
-      const saved = localStorage.getItem('admin_products');
-      return saved ? JSON.parse(saved) : defaultProducts;
-    } catch { return defaultProducts; }
+    try { const s = localStorage.getItem('admin_products'); return s ? JSON.parse(s) : defaultProducts; }
+    catch { return defaultProducts; }
   });
 
   const [categories, setCategories] = useState(() => {
-    try {
-      const saved = localStorage.getItem('admin_categories');
-      return saved ? JSON.parse(saved) : defaultCategories;
-    } catch { return defaultCategories; }
+    try { const s = localStorage.getItem('admin_categories'); return s ? JSON.parse(s) : defaultCategories; }
+    catch { return defaultCategories; }
   });
 
-  // Listen for changes made in the admin dashboard (same tab)
+  // Sync across tabs (admin tab saves → store tab reloads)
   useEffect(() => {
-    const handleStorage = () => {
+    const sync = () => {
       try {
         const p = localStorage.getItem('admin_products');
         const c = localStorage.getItem('admin_categories');
@@ -28,9 +24,19 @@ export function useProducts() {
         if (c) setCategories(JSON.parse(c));
       } catch {}
     };
-    window.addEventListener('storage', handleStorage);
-    return () => window.removeEventListener('storage', handleStorage);
+    window.addEventListener('storage', sync);
+    return () => window.removeEventListener('storage', sync);
   }, []);
 
-  return { products, categories };
+  const saveProducts = (updated) => {
+    setProducts(updated);
+    localStorage.setItem('admin_products', JSON.stringify(updated));
+  };
+
+  const saveCategories = (updated) => {
+    setCategories(updated);
+    localStorage.setItem('admin_categories', JSON.stringify(updated));
+  };
+
+  return { products, categories, saveProducts, saveCategories };
 }

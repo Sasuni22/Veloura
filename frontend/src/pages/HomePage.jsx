@@ -17,7 +17,7 @@ const socialPosts = [
     link: 'https://www.instagram.com/',
     icon: '📸',
     color: 'from-pink-500 to-purple-600',
-    image: 'https://images.unsplash.com/photo-1572804013309-59a88b7e92f1?w=400&auto=format&fit=crop&q=80',
+    image: '/images/bohomihi1.png',
     caption: 'New collection drop 🌸 Silk Maxi Dress now available',
     likes: '2.4k',
   },
@@ -31,16 +31,7 @@ const socialPosts = [
     caption: 'Get 30% OFF on selected Boho dresses this weekend only!',
     likes: '1.8k',
   },
-  {
-    platform: 'Pinterest',
-    handle: 'ZaraStyle Looks',
-    link: 'https://www.pinterest.com/',
-    icon: '📌',
-    color: 'from-red-500 to-red-700',
-    image: 'https://images.unsplash.com/photo-1566479179817-c0a3b4ed0b73?w=400&auto=format&fit=crop&q=80',
-    caption: 'Style inspo: Evening gowns for every occasion ✨',
-    likes: '5.1k',
-  },
+  
 ];
 
 export default function HomePage() {
@@ -70,7 +61,7 @@ export default function HomePage() {
                 transition={{ delay: 0.2 }}
                 className="inline-block text-primary-dark text-sm font-medium tracking-widest uppercase mb-4 border border-primary/30 bg-white/60 px-4 py-1.5 rounded-full"
               >
-                ✨ Autumn / Winter 2024
+                ✨ Where every look is a statement
               </motion.span>
 
               <motion.h1
@@ -79,9 +70,9 @@ export default function HomePage() {
                 transition={{ delay: 0.3, duration: 0.7 }}
                 className="font-display text-5xl md:text-6xl lg:text-7xl font-bold text-gray-900 leading-tight mb-6"
               >
-                New Autumn
+                New Collections 
                 <br />
-                <span className="text-primary-dark italic">Collection</span>
+                <span className="text-primary-dark italic">Out Now</span>
               </motion.h1>
 
               <motion.p
@@ -117,8 +108,8 @@ export default function HomePage() {
                 className="flex gap-8 mt-12"
               >
                 {[
-                  { label: 'Styles', value: '200+' },
-                  { label: 'Happy Customers', value: '50K+' },
+                  { label: 'Styles', value: '50+' },
+                  { label: 'Happy Customers', value: '100+' },
                   { label: 'New Arrivals', value: 'Weekly' },
                 ].map((stat) => (
                   <div key={stat.label}>
@@ -140,14 +131,14 @@ export default function HomePage() {
                 <div className="space-y-4 mt-8">
                   <div className="rounded-3xl overflow-hidden h-72 shadow-xl">
                     <img
-                      src="https://images.unsplash.com/photo-1572804013309-59a88b7e92f1?w=400&auto=format&fit=crop&q=80"
+                      src='/images/bohomihi1.png'
                       alt="Fashion"
                       className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
                     />
                   </div>
                   <div className="rounded-3xl overflow-hidden h-48 shadow-lg">
                     <img
-                      src="https://images.unsplash.com/photo-1539008835657-9e8e9680c956?w=400&auto=format&fit=crop&q=80"
+                      src='/images/floralcrop.png'
                       alt="Fashion"
                       className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
                     />
@@ -156,14 +147,14 @@ export default function HomePage() {
                 <div className="space-y-4">
                   <div className="rounded-3xl overflow-hidden h-48 shadow-lg">
                     <img
-                      src="https://images.unsplash.com/photo-1485462537746-965f33f7f6a7?w=400&auto=format&fit=crop&q=80"
+                      src='/images/LinenSummerDress1.png'
                       alt="Fashion"
                       className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
                     />
                   </div>
                   <div className="rounded-3xl overflow-hidden h-72 shadow-xl">
                     <img
-                      src="https://images.unsplash.com/photo-1618932260643-eee4a2f652a6?w=400&auto=format&fit=crop&q=80"
+                      src='/images/floralsilk1.png'
                       alt="Fashion"
                       className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
                     />
@@ -342,7 +333,7 @@ export default function HomePage() {
             {[
               { label: 'Instagram', icon: '📸', link: 'https://www.instagram.com/', color: 'hover:bg-pink-50 hover:border-pink-300 hover:text-pink-600' },
               { label: 'Facebook', icon: '📘', link: 'https://www.facebook.com/', color: 'hover:bg-blue-50 hover:border-blue-300 hover:text-blue-600' },
-              { label: 'Pinterest', icon: '📌', link: 'https://www.pinterest.com/', color: 'hover:bg-red-50 hover:border-red-300 hover:text-red-600' },
+          
               { label: 'TikTok', icon: '🎵', link: 'https://www.tiktok.com/', color: 'hover:bg-gray-50 hover:border-gray-400 hover:text-gray-800' },
             ].map((s) => (
               <a

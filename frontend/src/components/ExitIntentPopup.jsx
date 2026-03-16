@@ -8,21 +8,21 @@ const offerProducts = [
     name: 'Floral Silk Maxi Dress',
     originalPrice: 249,
     salePrice: 174,
-    image: 'https://images.unsplash.com/photo-1572804013309-59a88b7e92f1?w=300&auto=format&fit=crop&q=80',
+    image: '/images/floralsilk1.png',
   },
   {
     id: '3',
     name: 'Boho Midi Dress',
     originalPrice: 75,
     salePrice: 52,
-    image: 'https://images.unsplash.com/photo-1618932260643-eee4a2f652a6?w=300&auto=format&fit=crop&q=80',
+    image: '/images/bohomihi1.png',
   },
   {
     id: '5',
     name: 'Linen Summer Dress',
     originalPrice: 89,
     salePrice: 62,
-    image: 'https://images.unsplash.com/photo-1594938298603-c8148c4b4057?w=300&auto=format&fit=crop&q=80',
+    image: '/images/LinenSummerDress1.png',
   },
 ];
 

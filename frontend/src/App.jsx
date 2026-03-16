@@ -10,6 +10,7 @@ import ProductPage from './pages/ProductPage';
 import OrderPage from './pages/OrderPage';
 import OrderSuccessPage from './pages/OrderSuccessPage';
 import CategoryPage from './pages/CategoryPage';
+import AdminLogin from './pages/AdminLogin';
 import AdminDashboard from './pages/AdminDashboard';
 
 const pageVariants = {
@@ -23,14 +24,8 @@ function AnimatedRoutes() {
   const location = useLocation();
   return (
     <AnimatePresence mode="wait">
-      <motion.div
-        key={location.pathname}
-        initial="initial"
-        animate="in"
-        exit="out"
-        variants={pageVariants}
-        transition={pageTransition}
-      >
+      <motion.div key={location.pathname} initial="initial" animate="in" exit="out"
+        variants={pageVariants} transition={pageTransition}>
         <Routes location={location}>
           <Route path="/" element={<HomePage />} />
           <Route path="/category/:id" element={<CategoryPage />} />
@@ -43,25 +38,19 @@ function AnimatedRoutes() {
   );
 }
 
-// Store layout — has Navbar + Footer
 function StoreLayout() {
   return (
     <CartProvider>
       <div className="min-h-screen flex flex-col">
         <Navbar />
-        <main className="flex-1">
-          <AnimatedRoutes />
-        </main>
+        <main className="flex-1"><AnimatedRoutes /></main>
         <Footer />
         <ExitIntentPopup />
-        <Toaster
-          position="top-right"
-          toastOptions={{
-            duration: 4000,
-            style: { background: '#1f2937', color: '#fff', borderRadius: '12px', fontSize: '14px' },
-            success: { iconTheme: { primary: '#EA7B7B', secondary: '#fff' } },
-          }}
-        />
+        <Toaster position="top-right" toastOptions={{
+          duration: 4000,
+          style: { background: '#1f2937', color: '#fff', borderRadius: '12px', fontSize: '14px' },
+          success: { iconTheme: { primary: '#EA7B7B', secondary: '#fff' } },
+        }} />
       </div>
     </CartProvider>
   );
@@ -71,9 +60,11 @@ export default function App() {
   return (
     <BrowserRouter>
       <Routes>
-        {/* Admin — standalone layout, no Navbar/Footer */}
-        <Route path="/admin" element={<AdminDashboard />} />
-        {/* Store — full layout */}
+        {/* Admin login page — /admin */}
+        <Route path="/admin" element={<AdminLogin />} />
+        {/* Admin dashboard — /admin/dashboard (protected by session check inside component) */}
+        <Route path="/admin/dashboard" element={<AdminDashboard />} />
+        {/* Store */}
         <Route path="/*" element={<StoreLayout />} />
       </Routes>
     </BrowserRouter>
