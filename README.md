@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 # ZaraStyle — Modern Online Clothing Store
 
 A full-stack eCommerce web application for an online clothing store, built with React + Node.js.
