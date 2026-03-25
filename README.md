@@ -1,9 +1,12 @@
 
-# ZaraStyle — Modern Online Clothing Store
+# Veloura - where every look is a statement
 
 A full-stack eCommerce web application for an online clothing store, built with React + Node.js.
 
 ---
+## Live demo : veloura-app.up.railway.app
+## Admin Dashboard : veloura-app.up.railway.app/admin
+
 
 ## 🎨 Color Palette
 
