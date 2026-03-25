@@ -10,9 +10,6 @@ const app = express();
 connectDB();
 
 // ── CORS ──────────────────────────────────────────────────────
-// Allow requests from frontend — both local and production
-const cors = require('cors');
-
 app.use(cors({
   origin: [
     'http://localhost:5173',
