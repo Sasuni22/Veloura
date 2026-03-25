@@ -13,7 +13,7 @@ connectDB();
 app.use(cors({
   origin: [
     'http://localhost:5173',
-    'https://YOUR-FRONTEND-URL.up.railway.app'
+    'https://veloura-production.up.railway.app'
   ],
   credentials: true
 }));
